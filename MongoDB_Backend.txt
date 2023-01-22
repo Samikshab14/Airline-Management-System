@@ -1,0 +1,129 @@
+Microsoft Windows [Version 10.0.19043.2193]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\anamb>start
+
+C:\Users\anamb>mongo
+MongoDB shell version v4.0.28
+connecting to: mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("8fd53c95-3207-4172-81ab-bd3b41585d84") }
+MongoDB server version: 4.0.28
+Server has startup warnings:
+2022-11-08T12:08:49.974+0530 I CONTROL  [initandlisten]
+2022-11-08T12:08:49.975+0530 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2022-11-08T12:08:49.982+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2022-11-08T12:08:49.993+0530 I CONTROL  [initandlisten]
+2022-11-08T12:08:49.999+0530 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2022-11-08T12:08:50.007+0530 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server.
+2022-11-08T12:08:50.011+0530 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP
+2022-11-08T12:08:50.023+0530 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2022-11-08T12:08:50.030+0530 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2022-11-08T12:08:50.033+0530 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2022-11-08T12:08:50.036+0530 I CONTROL  [initandlisten]
+---
+Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+and anyone you share the URL with. MongoDB may use this information to make product
+improvements and to suggest MongoDB products and deployment options to you.
+
+To enable free monitoring, run the following command: db.enableFreeMonitoring()
+To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+
+> use airline
+switched to db airline
+> db.pax.find().pretty()
+{
+        "_id" : ObjectId("63621215fface4337d5b5f66"),
+        "cust_id" : "102",
+        "name" : "Zayn Malik",
+        "mob_no" : "8856052889",
+        "address" : "New York",
+        "flight_no" : "OA 203",
+        "status" : "Economy",
+        "flight_date" : "1 March 2023",
+        "amount" : "30000"
+}
+{
+        "_id" : ObjectId("636264040cde563c0dea6977"),
+        "cust_id" : "103",
+        "name" : "Harry Edward Styles",
+        "mob_no" : "7219433121",
+        "address" : "London",
+        "flight_no" : "OA 202",
+        "status" : "Business",
+        "flight_date" : "4 December 2022",
+        "amount" : "60000"
+}
+{
+        "_id" : ObjectId("6368d0a62e3bd94cb45c9fd4"),
+        "cust_id" : "101",
+        "name" : "Anam Wasim Bagwan",
+        "mob_no" : "9923300487",
+        "address" : "Pune",
+        "flight_no" : "OA 201",
+        "status" : "Business",
+        "flight_date" : "6 January 2024",
+        "amount" : "50000"
+}
+> db.flight.find().pretty()
+{
+        "_id" : ObjectId("6360edcbb64c717e529e87d2"),
+        "flight_no" : "OA 201",
+        "flight_dept" : "Montreal (YUL)",
+        "flight_arrival" : "Saint John (YSJ)",
+        "flight_seats" : "100"
+}
+{
+        "_id" : ObjectId("6362128dfface4337d5b5f6f"),
+        "flight_no" : "OA 202",
+        "flight_dept" : "Delhi (DEL)",
+        "flight_arrival" : "Vancouver (YVR)",
+        "flight_seats" : "120"
+}
+{
+        "_id" : ObjectId("636266c20cde563c0dea697a"),
+        "flight_no" : "OA 203",
+        "flight_dept" : "Toronto (YYZ)",
+        "flight_arrival" : "Lisbon (LIS)",
+        "flight_seats" : "150"
+}
+{
+        "_id" : ObjectId("636267d20cde563c0dea697c"),
+        "flight_no" : "OA 204",
+        "flight_dept" : "Orlando (MCO)",
+        "flight_arrival" : "Miami (MIA)",
+        "flight_seats" : "150"
+}
+{
+        "_id" : ObjectId("636360f599afb92ccca48e25"),
+        "flight_no" : "OA 205",
+        "flight_dept" : "Delhi (DEL)",
+        "flight_arrival" : "Toronto (YYZ)",
+        "flight_seats" : "100"
+}
+{
+        "_id" : ObjectId("6364b598a4f65e4cca450ea3"),
+        "flight_no" : "OA 206",
+        "flight_dept" : "Delhi (DEL)",
+        "flight_arrival" : "Toronto (YYZ)",
+        "flight_seats" : "100"
+}
+> db.pax_information.find().pretty()
+{
+        "_id" : ObjectId("6364ba00adf53134ec7cc733"),
+        "cust_id" : "105",
+        "name" : "Niall",
+        "mob_no" : "7219433131",
+        "address" : "London"
+}
+{
+        "_id" : ObjectId("6364bd27c041126fd31482e9"),
+        "cust_id" : "106",
+        "name" : "Anam",
+        "mob_no" : "9923300486",
+        "address" : "Pune"
+}
+>
